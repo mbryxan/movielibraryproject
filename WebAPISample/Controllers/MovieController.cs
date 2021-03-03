@@ -20,9 +20,10 @@ namespace WebAPISample.Controllers
         }
         // GET api/movie
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get(string movie)
         {
             // Retrieve all movies from db logic
+            var movies = _context.Movies.ToList();
             return Ok(new string[] { "movie1 string", "movie2 string" });
         }
 
