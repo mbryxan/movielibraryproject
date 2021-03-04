@@ -5,21 +5,27 @@
         	Director: this["director"].value
         };
 
-        $.ajax({
-            url: 'https://localhost:44325/api/movie',
-            dataType: 'json',
-            type: 'post',
-            contentType: 'application/json',
-            data: JSON.stringify(dict),
-            success: function( data, textStatus, jQxhr ){
-                $('#response pre').html( data );
-            },
-            error: function( jqXhr, textStatus, errorThrown ){
-                console.log( errorThrown );
-            }
-        });
 
-        e.preventDefault();
+
+        $(function () {
+            $.get("https://localhost:44325/api/movie", function (data) {
+                console.log(data);
+                data.map(function (el) {
+                    $("#PrintHere").append(`<div>
+            <div>Title: ${el.title}</div>
+            <div>Director: ${el.director}</div>
+            <div>Genre: ${el.genre}</div>
+            </div><br>`);
+                })
+                data.map(function (el) {
+                    $("#tableData").append(`<tr>
+            <td style="color:red">${el.title}</td>
+            <td>${el.director}</td>
+            <td>${el.genre}</td>
+            </tr>`);
+                })
+            });
+        })
     }
 
     $('#my-form').submit( processForm );
