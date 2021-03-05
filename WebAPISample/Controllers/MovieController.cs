@@ -37,7 +37,11 @@ namespace WebAPISample.Controllers
 
             // Retrieve movie by id from db logic
             // return Ok(movie);
+<<<<<<< HEAD
             return Ok();
+=======
+            return Ok(movie);
+>>>>>>> a7c79ae23493e5385ad4aa619b60627087240198
         }
 
         // POST api/movie
