@@ -1,1 +1,1 @@
-# movielibraryproject
+# MovieLibraryCore
