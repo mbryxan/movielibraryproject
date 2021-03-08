@@ -1,0 +1,26 @@
+
+p{
+    
+    /*background: rgb(224, 67, 67);*/
+ opacity: .90; 
+ background-image: url("OpaqueBkgnd.png");
+ border:30px; 
+ border-style:solid; 
+ border-color:#e49116; 
+ padding: 1em;
+}
+.test-class1{
+    background-color: rgb(231, 211, 31);
+ 
+    /*COLOR OR WHOLE DIV CLASS*/
+    /*height: 50px;
+    width: 1000px;*/
+       
+        
+    }
+.test-class2{
+    background-color: salmon;
+}
+.test-class3{
+    background-color: rgb(42, 170, 110);
+}

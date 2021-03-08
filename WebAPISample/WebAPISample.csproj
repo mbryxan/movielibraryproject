@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <Folder Include="imgs\" />
+    <Folder Include="NewLibrary\" />
   </ItemGroup>
 
 </Project>

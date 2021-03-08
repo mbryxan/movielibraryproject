@@ -37,11 +37,8 @@ namespace WebAPISample.Controllers
 
             // Retrieve movie by id from db logic
             // return Ok(movie);
-<<<<<<< HEAD
-            return Ok();
-=======
+
             return Ok(movie);
->>>>>>> a7c79ae23493e5385ad4aa619b60627087240198
         }
 
         // POST api/movie
@@ -55,16 +52,18 @@ namespace WebAPISample.Controllers
             return Ok();
         }
 
-        // PUT api/movie
+        // PUT api/movie/{id}
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Movie movie) //added parameter int id
         {
             var movieInDb = _context.Movies.Where(m => m.MovieId == id).SingleOrDefault();
-            movieInDb.MovieId = movie.MovieId;
             movieInDb.Title = movie.Title;
             movieInDb.Director = movie.Director;
             movieInDb.Genre = movie.Genre;
             // Update movie in db logic
+            //Hint:go back to superhero and mimic update
+            _context.Movies.Update(movieInDb);
+            _context.SaveChanges();
             return Ok();
         }
 

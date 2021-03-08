@@ -1,57 +1,92 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>jQuery AJAX POST Form</title>
-    <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+  <html>
+    <head> 
 
-<body>
+      <title>JT'sSaturdayMovie</title>
+      <meta charset="UTF-8">
+      
+      <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="stylesheets/JTSheet.css"> <!--DON'T TOUCH THIS-->
 
-    <h2>Data here </h2>
-    <div id="PrintHere"></div>
+              <!--only use this HTML version, ask Nevin for instructions on guiding the GitPush-->
+    </head>
+  <body>
 
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    Title
-                </th>
-                <th>
-                    Director
-                </th>
-                <th>
-                    Genre
-                </th>
-            </tr>
-        </thead>
-        
-        <tbody id="TableData">
-        </tbody>
-    </table>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-
-    <div id="response">
-        <pre></pre>
-        <img src="\\Mac\Home\Desktop\MovieLibraryCore-master\WebAPISample\imgs\OIP (1).jpg" />
-    </div>
-
-    <form id="my-form">
-        <input type="text" name="title" placeholder="Title" />
-        <input type="text" name="director" placeholder="Director" />
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./app.js"></script>
+       <Center><h1><p>Welcome to <em> devMovette&trade;,</em>  a new, convenient web app that allows you to share your movie expertise with family & friends -- any time, from anywhere!<br>
+        <br>
+        <br>
+        <br>It's true -- your family and friends want to know <em>your</em> movie recommendations, not an anonymous reviewer! ....<br> 
+        <br>
+        <br>
+        <br>Now you can post your movie recommendations on-line -- <em>everyone</em> can see your movie recommendations with <em> devMovette&trade;.</em>
+        <br>
+        <br>Just as helpful, your family and friends <u>can leave their own movie recommendations,</u> by <em>Movie Title, Director, and Genre.</em> 
+        <br>
+        <br>The days of scrolling through unhelpful movie reviews by people you don't know, and who don't know you, are over! <br>
+        <br>
+        <br>And if <em>'Movies'</em> aren't your thing, any devCodeCamp graduate can change this application platform to <em>'Song, Artist, Style'</em> or <em>'Book, Author, Page Length' </em>
+        <br>
+        <br>
+        <br>
+        <br>in fifteen keystrokes or less! Don't wait -- download <em> devMovette&trade;</em> right now -- and get started sharing your good taste today!<br>
+        <br>
 
 
-</body>
+      </p></h1></Center>
+      
+
+    <div class="test-class1">
+      <br>
+     <center><h1>Let's get started! Read the Reviews, watch the trailers below, and leave a review of your own!</h1></center> 
+     <iframe width="460" height="315" src="https://www.youtube.com/embed/j_sijQNoxa0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <iframe width="460" height="315" src="https://www.youtube.com/embed/ZOYbg7lMOOc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <iframe width="460" height="315" src="https://www.youtube.com/embed/Jit3YhGx5pU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DqR-8928R3s?start=72" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DqR-8928R3s?start=72" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>     <iframe width="460" height="315" src="https://www.youtube.com/embed/5VgRuLQgeSE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <br>
+  <div class="test-class2" style="max-width:2400px;margin-top:100px">
+      
+        <!-- This is the div that gets populated with movies from database -->
+          <div id="PrintHere"></div> 
+
+          <table class="movie-table">
+              <thead>
+                  <tr>
+                      <th>
+                          Title
+                      </th>
+                      <th>
+                          Director
+                      </th>
+                      <th>
+                          Genre
+                      </th>
+                  </tr>
+              </thead>
+              
+              <tbody id="TableData">
+              </tbody>
+          </table>
+      
+      </div>
+      <br>
+      <br>
+      <br>
+      <div>
+      <div class="test-class2">
+      <center><form id="my-form">
+          <input type="text" name="title" placeholder="Title" />
+          <input type="text" name="director" placeholder="Director" />
+          <input type="text" name="genre" placeholder="Genre" />
+
+          <button type="submit">Submit</button>
+      </form></center></div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="./app.js"></script>
+
+
+  </body>
  
 </html>
