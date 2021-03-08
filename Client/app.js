@@ -1,5 +1,12 @@
 $(function () {
     function processForm( e ){
+<<<<<<< HEAD
+        var dict = {
+        	Title : this["title"].value,
+        	Director: this["director"].value
+        };
+
+=======
         //added this event, see what it does
     
         var value = {
@@ -22,13 +29,23 @@ $(function () {
 
     e.preventDefault();
     }
+>>>>>>> cff5a84fe4ce3a862243a84d89d4253810e810d6
 
  $('#my-form').submit( processForm );
 })
 
+<<<<<<< HEAD
+        
+    }
+
+    $('#my-form').submit( processForm );
+})(jQuery);
+=======
+>>>>>>> cff5a84fe4ce3a862243a84d89d4253810e810d6
 $(function () {
     $.get("https://localhost:44325/api/movie", function (data) {
         console.log(data);
+<<<<<<< HEAD
         data.map(function (el) {  
             $("#PrintHere").append(`<div class="movie"> 
            <h2>Title: ${el.title}</h2>
@@ -71,6 +88,7 @@ function ReloadMovieGrid(){
         <button onclick="editMovie(${el.movieId})">Edit</button>
         </div>
             </div><br>`);
+
         })
     });
 }
